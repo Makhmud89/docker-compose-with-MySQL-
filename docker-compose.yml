@@ -11,8 +11,8 @@ services:
     environment:
       MYSQL_DATABASE: 'db'   
       MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'maxmud'      
-      MYSQL_ROOT_PASSWORD: 'maxmud'
+      MYSQL_PASSWORD: 'pass'      
+      MYSQL_ROOT_PASSWORD: 'pass'
     ports:
       - '8080:80'
     #expose:
