@@ -1,0 +1,23 @@
+version: '3.3'
+services:
+  web:
+    image: maxmud/yourock
+    ports:
+      - '80:8080'
+  database:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'   
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'maxmud'      
+      MYSQL_ROOT_PASSWORD: 'maxmud'
+    ports:
+      - '8080:80'
+    #expose:
+    #  - '8080'
+    volumes:
+      - './.mysql-data/db:/var/lib/mysql'
+    expose:
+      - '80'
